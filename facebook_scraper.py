@@ -3,7 +3,7 @@ import requests
 def getPosts():
     posts = []
     facebook_request = requests.get(
- "https://graph.facebook.com/v20.0/me?fields=id%2Cname%2Cposts%7Bmessage%2Cfull_picture%7D&origin_graph_explorer=1&transport=cors&access_token=EAAGjIfPPdYsBO6yls0BeZCdAp92Q232eKr1ZB06alk8ysO7f6KL51Vvpw6ePvATsNkSrLEB7Ca1ZAhrEq0DRYcazWD7L9hxsd1WVV3CBJqAyZCC5xsafaY4YlYAygOYFIIrNoUsHCgcsAZCQKhMeXqJwOeKt6mursjUdlIGbuWkXshVnkn0uAI1aPHulztIVDwmOZCl8M7YldsDssmcl8LuwxKvuarlqcHBpZAZBnCPWFrAZCxLHDPMkh"
+ "https://graph.facebook.com/v20.0/me?fields=id%2Cname%2Cposts%7Bmessage%2Cfull_picture%7D&origin_graph_explorer=1&transport=cors&access_token=EAAGjIfPPdYsBO6YqZBMUGWz7QZBKH98VplDedASodeQ32IOnmaHh2ivOAsOZAZClZC75eNNfe4JTTfmevjZBoiIJ7eP12baY48TZBmAF5rV6W2XrBP97dZBCapJ5iUveznD50rqzomzMIpHX7Tn2HYr7ekR8IbmveoTE30ZBeIy9s4bBC2EZCSZBZCZCLoWZCfBA6Ih8baBnLH7ZCjgL6ZBFqO9xFXsQ9B6kiZAl9nPWHtdZAIq2ADJHMgZBrDkxZCdB"
 )
     
     name = facebook_request.json()['name']
