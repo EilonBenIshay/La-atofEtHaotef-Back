@@ -1,4 +1,3 @@
-from controllers.posts_controller import posts_bp 
 from flask import Flask
 from instagram_scraper import get_all_posts
 
