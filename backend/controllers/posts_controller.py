@@ -1,4 +1,4 @@
-from backend.models.FBPost import FBPost
+from models.FBPost import FBPost
 import requests
 
 @staticmethod
