@@ -61,7 +61,7 @@ class InstagramUser:
         self.__posts = [
                         {
                             "imageURL" : post["node"]["display_url"],
-                            "description" : b64encode(post["node"]["edge_media_to_caption"]["edges"][0]["node"]["text"].encode("UTF-16")).decode(),
+                            "description" : post["node"]["edge_media_to_caption"]["edges"][0]["node"]["text"],
                             "userName" :  "INSTAGRAM__" + username
                         }
                         for post in self.__scraped_data["edge_owner_to_timeline_media"]["edges"]
