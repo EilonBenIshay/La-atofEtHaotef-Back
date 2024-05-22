@@ -74,8 +74,8 @@ class InstagramUser:
 def get_all_posts(usernames):
     posts = []
     for username in usernames:
-        user = InstagramUser(username)
         try:
+            user = InstagramUser(username)
             posts += user.get_posts()
         except:
             pass
