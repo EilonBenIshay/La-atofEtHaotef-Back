@@ -1,14 +1,19 @@
 from flask import Flask
 from instagram_scraper import get_all_posts
 from facebook_scraper import getPosts
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config["CORS_HEADERS"] = "Content-Type"
 
 @app.route('/')
+@cross_origin()
 def hello():
     return 'Hello, World!'
 
 @app.route('/Instagram')
+@cross_origin()
 def getInstagramPage():
     USERNAMES = [ "otef.gaza", "logistic_center_", "ironswords_volunteers",
                   "aguda.sherut", "hashomer_hachadash", "ironswords_volunteers",
@@ -18,6 +23,7 @@ def getInstagramPage():
     return get_all_posts(USERNAMES)
 
 @app.route('/Facebook')
+@cross_origin()
 def getFacebookPage():
     return getPosts()
     
