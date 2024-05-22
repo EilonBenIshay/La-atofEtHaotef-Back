@@ -1,3 +1,0 @@
-flask
-requests
-# Add other dependencies as needed
