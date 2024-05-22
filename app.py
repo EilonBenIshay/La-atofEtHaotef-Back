@@ -1,6 +1,6 @@
 from flask import Flask
 from instagram_scraper import get_all_posts
-from controllers.posts_controller import getPosts
+from facebook_scraper import getPosts
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
