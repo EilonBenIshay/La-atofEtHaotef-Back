@@ -1,3 +1,4 @@
 fake_headers
 requests
 flask
+flask-cors
