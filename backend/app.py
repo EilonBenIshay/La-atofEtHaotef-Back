@@ -1,7 +1,7 @@
-from controllers.posts_controller import posts_bp 
 from flask import Flask
 from instagram_scraper import get_all_posts
-
+from controllers.posts_controller import getPosts
+from models.Post import Post
 app = Flask(__name__)
 
 @app.route('/')
@@ -16,6 +16,10 @@ def getInstagramPage():
                   "volunteer_jlm"]
 
     return get_all_posts(USERNAMES)
+
+@app.route('/Facebook')
+def getFacebookStuff():
+    return getPosts()
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=80)
