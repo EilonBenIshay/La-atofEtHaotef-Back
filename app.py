@@ -50,7 +50,7 @@ def getInstagramPage():
 @app.route('/Facebook', methods=['GET'])
 @cross_origin()
 def getFacebookPage():
-    mode = int(request.args.get('mode', 0))
+    mode = int(request.args.get('mode', 1))
     posts = getPosts()
     return [p.to_json() for p in posts if p.mode == mode]
     
