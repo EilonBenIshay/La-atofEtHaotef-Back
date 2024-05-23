@@ -12,7 +12,7 @@ class Post:
     def to_json(self):
         return {
             "userName" : self.userName,
-            "dateTime" : self.dateTime,
+            "dateTime" : self.datetime,
             "imageURL" : self.imageURL,
             "description" : self.description,
             "mode" : self.mode,
