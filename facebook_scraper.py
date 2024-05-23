@@ -4,7 +4,7 @@ from post import Post
 def getPosts():
     posts = []
     facebook_request = requests.get(
- "https://graph.facebook.com/v20.0/me?fields=id%2Cname%2Cposts%7Bmessage%2Cfull_picture%7D&origin_graph_explorer=1&transport=cors&access_token=EAAGjIfPPdYsBO5ZBoFEh8Y9OBK8EM17zlGj84WMiHpJlZBGFmscGLUSad85GofjMH0HyAsJBSNBPiI8OR5DNmdAE6vQeubL9AZAFWPitThMHqBUUEY7daMH0uxvZCyID6jpvb3RENXFwky4OJmTU1hQedq0ZBujy98bc5Q6uHyrE0vmpMceqLJ1eS"
+ "https://graph.facebook.com/v20.0/me?fields=id%2Cname%2Cposts%7Bmessage%2Cfull_picture%7D&origin_graph_explorer=1&transport=cors&access_token=EAAGjIfPPdYsBO4ycAvAA1GCa9jYoSFrw5DOlufmZBRHpWZA5C2KGhTu96kWfXkkTAk5gvZAZCR445JWLpbnLZBFOAEYTNJ9ZAzvoTj7ZA8uTYHTwSj1BWYhaq2AFLVNqvaY3kJA1E9j2F5HYEtjA4diBw6reXYzx5vRQ6XsSPUATwL467rL97bDhZAz3"
 )
     
     name = facebook_request.json()['name']
