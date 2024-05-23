@@ -1,4 +1,5 @@
 import requests
+from post import Post
 
 def getPosts():
     posts = []
@@ -12,13 +13,20 @@ def getPosts():
     for data in fbposts[:-1]:
         picture = ""
         message = ""
+        createdDate = ""
         if 'full_picture' in data.keys():
             picture = data['full_picture']
         if 'message' in data.keys():
             message = data['message']
+        if 'created_date' in data.keys():
+            createdDate = data['created_date']
         
-        posts.append({"userName" : name,
-                      "imageURL" : picture,
-                      "description" : message})
+        if "מחפש " in message:
+            mode = 1
+        elif "למסירה " in message:
+            mode = 0
+        else:
+            mode = 2
         
+        posts.append(Post(name, createdDate, picture, message, mode, "Facebook"))
     return posts
