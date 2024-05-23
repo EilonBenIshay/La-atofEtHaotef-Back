@@ -21,7 +21,7 @@ def getPosts():
         if 'created_date' in data.keys():
             createdDate = data['created_date']
         
-        if "מחפש " in message:
+        if "מחפש " in message or "עוטף" in message or "מחפשים" in message or "מחפשת" in message:
             mode = 1
         elif "למסירה " in message:
             mode = 0
