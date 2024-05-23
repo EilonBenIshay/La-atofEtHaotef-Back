@@ -10,7 +10,14 @@ class Post:
         self.source = source
     
     def to_json(self):
-        return json.dumps(self.__dict__)
+        return {
+            "userName" : self.userName,
+            "dateTime" : self.dateTime,
+            "imageURL" : self.imageURL,
+            "description" : self.description,
+            "mode" : self.mode,
+            "source" : self.source,
+        }
     
     @classmethod
     def from_json(cls, json_str):
